@@ -1,0 +1,41 @@
+body#index-body {
+    background-color: rgb(152, 180, 216);
+}
+
+h1 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: darkslateblue;
+}
+
+a {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: lightgrey;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    overflow: auto;
+    position: fixed;
+    right: 0;
+    top: 0;
+    -o-object-fit: contain;
+    object-fit: contain;
+}
+
+.svg-container {
+    position: fixed;
+    text-align: center;
+    transform: scaleX(-1) rotate(-90deg);
+}
+circle#thecircle {
+    fill: lightgrey;
+    stroke: indigo;
+    stroke-width: 10;
+    stroke-dasharray: 400;
+    stroke-dashoffset: 400;
+}

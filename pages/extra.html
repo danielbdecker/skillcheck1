@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Something Extra</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <p style="position: fixed;">You've scrolled: <span id="percentage">0</span>%</p>
+    <!-- <svg style = "position: fixed;" viewBox="0 0 36 36">
+        <path
+            d="M18 2.0845
+                a 3.978875 3.978875 0 0 1 0 7.95775
+                a 3.978875 3.978875 0 0 1 0 -7.95775"
+            fill = "lightgrey"
+            stroke = "indigo";
+            stroke-width="0.5"; 
+            stroke-dasharray: 400;/>
+    </svg> -->
+    <div class="svg-container">
+        <svg class="svga" width="300" height="300">
+            <circle id="thecircle" cx = "120" cy = "120" r = 63.7 />
+        </svg>
+
+    </div>
+
+    <script>
+        const percentInHTML = document.querySelector("#percentage");
+        window.addEventListener("scroll", () => {
+            let windowScroll = window.scrollY;
+            let documentHeight = document.body.offsetHeight;
+            let windowHeight = window.innerHeight;
+            let percent = windowScroll/(documentHeight-windowHeight);
+            let roundedPercent = Math.floor(percent * 100);
+            percentInHTML.innerHTML = roundedPercent;
+            document.getElementById('thecircle').style.strokeDashoffset = 400 + roundedPercent * 4;
+        })
+
+    </script>
+    <div style="height: 3000px;"></div>
+</body>
+</html>

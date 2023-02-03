@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skill Check 1 Index</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script>
+        function load() {
+            var isFired = localStorage.getItem('checkFired');
+            if (isFired != '1'){
+                alert("Hey, welcome to my skill check. Please enjoy \n-Daniel");
+                localStorage.setItem('checkFired', '1');
+            }
+        }
+        load();
+    </script>
+</head>
+<body id="index-body">
+    <h1>Skill Check 1</h1>
+    <a href="/pages/extra.html">something extra</a><br>
+    <a href="tree.txt">tree.txt</a><br><br>
+    <img src="https://media.tenor.com/cNnsPB7dYfYAAAAC/dancing-dog.gif">
+</body>
+</html>
